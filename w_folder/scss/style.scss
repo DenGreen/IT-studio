@@ -22,6 +22,7 @@
 
 .header {
   min-height: 100vh;
+  position: relative;
 
   display: flex;
   flex-direction: column;
@@ -93,7 +94,10 @@
   }
 
   &__title-box {
-    padding-top: 100px;
+  }
+
+  &__nav, &__title-box, &__slogan-box, &__link-btn {
+    z-index: 1;
   }
 
   &__title {
@@ -107,6 +111,17 @@
 
   &__link-btn {
   }
+}
+
+.header:after{
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #000000;
+  opacity: 0.2;
 }
 .link-button {
 }
