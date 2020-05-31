@@ -32,6 +32,17 @@
   background-size: cover;
   background-color: #1e2a4f;
 
+  &:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    opacity: 0.2;
+  }
+
   &__nav {
     width: 100%;
     position: relative;
@@ -93,35 +104,47 @@
     bottom: 0px;
   }
 
-  &__title-box {
-  }
-
-  &__nav, &__title-box, &__slogan-box, &__link-btn {
+  &__nav, &__title, &__slogan-box, &__link-btn {
     z-index: 1;
   }
 
   &__title {
+    padding-top: 220px;
+    @include fontz("Medium", none, 16px, #ffffff);
+    line-height: 20px;
   }
 
   &__slogan-box {
+    width: 800px;
+    text-align: center;
   }
 
   &__slogan {
+    padding-top: 20px;
+    @include fontz("ExtraBold", none, 48px, #ffffff);
+    line-height: 64px;
   }
 
   &__link-btn {
+    margin-top: 35px;
   }
 }
 
-.header:after{
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: #000000;
-  opacity: 0.2;
-}
 .link-button {
+  width: 200px;
+  height: 45px;
+  padding-top: 13px;
+    
+  background-color: #4985FF;
+  box-shadow: 0px 0px 10px rgba(111, 111, 111, 0.25);
+  border-radius: 90px;
+  transition: background 0.6s ease;
+
+  @include fontz("Medium", none, 16px, #ffffff);
+  text-align: center;
+  line-height: 20px;
+
+  &:hover{
+    background-color: #00008B;
+  }
 }
