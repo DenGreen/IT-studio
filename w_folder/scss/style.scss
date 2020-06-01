@@ -131,6 +131,7 @@
 }
 
 .link-button {
+  position: relative;
   width: 200px;
   height: 45px;
   padding-top: 13px;
@@ -138,13 +139,40 @@
   background-color: #4985FF;
   box-shadow: 0px 0px 10px rgba(111, 111, 111, 0.25);
   border-radius: 90px;
-  transition: background 0.6s ease;
+  transition: 0.6s ease;
+  transition: all 0.2s linear 0s;
 
   @include fontz("Medium", none, 16px, #ffffff);
   text-align: center;
   line-height: 20px;
 
-  &:hover{
+  &:before {
+    content: "\27A4";
+    font-family: FontAwesome;
+    font-size: 15px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    height: 100%;
+    width: 40px;
+    transition: all 0.2s linear 0s;
+  }
+  
+  &:hover {
+    text-indent: -20px;
     background-color: #724DFF;
+    
+    &:before {
+      opacity: 1;
+      text-indent: 0px;
+    }
+  }
+
+  &:active {
+    background-color: #3719A6;
   }
 }
