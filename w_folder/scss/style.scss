@@ -20,6 +20,7 @@
   color: $c;
 }
 
+/* header*/
 
 .header {
   min-height: 100vh;
@@ -176,4 +177,113 @@
   &:active {
     background-color: #3719A6;
   }
+}
+/* ====================================== */
+
+.main {
+
+  &__box {
+  }
+}
+.box-white {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  &__content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    width: 1115px;
+    text-align: center;
+  }
+
+  &__title {
+    padding-top: 110px;
+    width: 740px;
+  }
+
+  &__text {
+    padding-top: 50px;
+    width: 730px;
+    @include fontz("Regular", none, 16px, #999999);
+    line-height: 25px;
+  }
+
+  &__row {
+    padding-top: 70px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__link {
+    margin-top: 70px;
+    margin-bottom: 105px;
+  }
+}
+.title-content {
+  @include fontz("Bold", none, 36px, #323232);
+  line-height: 53px;
+}
+.col-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 350px;
+
+  &__img-box {
+    width: 90px;
+    height: 90px;
+    border: 1px solid #4985FF;
+    border-radius: 50%;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: 110px;
+      height: 110px;
+      border: 1px solid #E0E0E0;
+      border-radius: 50%;
+    }
+  }
+
+  &__img {
+    margin: 30px;
+    width: 40px;
+    height: 40px;
+  }
+
+  &__box {
+    text-align: start;
+    width: 225px;
+  }
+
+  &__title {
+    padding-top: 40px;
+    @include fontz ("SemiBold", none, 18px, #000000);
+    line-height: 22px;
+  }
+
+  &__text {
+    @include fontz ("Regular", none, 14px, #999999);
+    line-height: 22px;
+  }
+}
+.box-smoky-white {
+}
+.box-gradient-white {
+}
+.box-img-white {
+}
+
+
+
+.footer{
+  height: 200px;
 }
