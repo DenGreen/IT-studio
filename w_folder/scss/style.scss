@@ -183,13 +183,13 @@
 .main {
 
   &__box {
-  }
-}
-.box-white {
   display: flex;
   align-items: center;
   flex-direction: column;
-
+  }
+}
+.box-white {
+  
   &__content {
     display: flex;
     align-items: center;
@@ -276,6 +276,7 @@
   }
 }
 .box-smoky-white {
+  background-color: #F6F6F8;
 }
 .box-gradient-white {
 }
